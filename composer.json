@@ -1,10 +1,10 @@
 {
-  "name": "didymo/assetmanage-master",
+  "name": "didymo/assetmanage",
   "type": "drupal-module",
   "description": "Service Club Asset Manager Drupal 8 module",
   "keywords": ["Drupal"],
   "license": "GPL-2.0+",
-  "homepage": "https://github.com/didymo/assetmanage-master",
+  "homepage": "https://github.com/didymo/assetmanage",
   "minimum-stability": "dev",
   "require": { }
 }
