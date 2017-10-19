@@ -1,0 +1,7 @@
+name: Manage Assets
+type: module
+description: 'Asset Management'
+core: 8.x
+package: Custom
+dependencies:
+    2: datetime
