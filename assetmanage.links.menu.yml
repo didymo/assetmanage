@@ -1,11 +1,4 @@
 # Asset menu items definition
-entity.asset.collection:
-  title: 'Asset list'
-  route_name: entity.asset.collection
-  description: 'List Asset entities'
-  parent: system.admin_structure
-  weight: 100
-
 asset.admin.structure.settings:
   title: Asset settings
   description: 'Configure Asset entities'
@@ -40,13 +33,6 @@ asset.owned:
   parent: asset.home
   menu_name: main
   weight: -6
-
-asset.overview:
-  title: 'Asset Overview'
-  route_name: asset_overview
-  parent: asset.home
-  menu_name: main
-  weight: -4
 
 asset.expiry:
   title: 'Asset Expiry List'
