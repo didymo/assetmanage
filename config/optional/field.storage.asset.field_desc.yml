@@ -5,6 +5,8 @@ dependencies:
   module:
     - assetmanage
     - text
+_core:
+  default_config_hash: xI8tRa5HLPATafGUUPXnwIxnEGjqRQMP0ylLETxH6gU
 id: asset.field_desc
 field_name: field_desc
 entity_type: asset

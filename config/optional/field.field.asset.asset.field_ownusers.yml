@@ -7,6 +7,8 @@ dependencies:
   module:
     - assetmanage
     - link
+_core:
+  default_config_hash: 7HphXDSsWptr4Rwc-oxfVdxSljBqjdbWVy5cTGzSnSs
 id: asset.asset.field_ownusers
 field_name: field_ownusers
 entity_type: asset

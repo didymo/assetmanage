@@ -6,7 +6,7 @@ dependencies:
     - assetmanage
     - datetime
 _core:
-  default_config_hash: hIjP4QmTo49j5OtRA40uL7yF4h6XVGQDEdIpzVuKNi4
+  default_config_hash: _HVPUQLQ8YO5IoWZIiYjk71dTjogVB1zTfBQi_9GlQc
 id: asset.field_expiry
 field_name: field_expiry
 entity_type: asset

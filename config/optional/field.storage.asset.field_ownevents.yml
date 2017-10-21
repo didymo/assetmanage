@@ -5,6 +5,8 @@ dependencies:
   module:
     - assetmanage
     - link
+_core:
+  default_config_hash: ZnDrzATKfLjRs63dyOyobZVPYWHbxllpvfOOOCkXQ9A
 id: asset.field_ownevents
 field_name: field_ownevents
 entity_type: asset

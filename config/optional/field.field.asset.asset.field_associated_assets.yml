@@ -7,12 +7,12 @@ dependencies:
   module:
     - assetmanage
 _core:
-  default_config_hash: x64_WF8SdIUU11fHw9HMfNfXNVt9xLF5p_YF0tr7xZM
+  default_config_hash: rFvogG989RqaSMY2j9XNLFqZ0tDxQFQwF_mASoELuWc
 id: asset.asset.field_associated_assets
 field_name: field_associated_assets
 entity_type: asset
 bundle: asset
-label: 'Associated Assets'
+label: 'Associated Assets : '
 description: ''
 required: false
 translatable: false

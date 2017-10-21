@@ -3,11 +3,11 @@ langcode: en
 status: true
 dependencies:
   module:
+    - assetmanage
     - file
     - image
-    - assetmanage
 _core:
-  default_config_hash: nQJNTaFKx8sT3CeDu2o--rg8SuixWYpbuuBFtse-j6I
+  default_config_hash: TVZV3mKfw2LzbakdTNMv8qJ_QyTqku3cekvYP1i-D1o
 id: asset.field_image
 field_name: field_image
 entity_type: asset
@@ -22,6 +22,7 @@ settings:
   target_type: file
   display_field: false
   display_default: false
+  uri_scheme: public
 module: image
 locked: false
 cardinality: -1
