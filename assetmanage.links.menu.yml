@@ -11,3 +11,47 @@ asset.admin.structure.settings:
   description: 'Configure Asset entities'
   route_name: asset.settings
   parent: system.admin_structure
+
+asset.home:
+  title: 'Asset'
+  route_name: entity.asset.add_form
+  parent: main
+  menu_name: main
+  expanded: TRUE
+  weight: -5
+
+asset.add:
+  title: 'Add Asset'
+  route_name: entity.asset.add_form
+  parent: asset.home
+  menu_name: main
+  weight: -10
+
+asset.viewlist:
+  title: 'View Asset list'
+  route_name: asset_viewlist
+  parent: asset.home
+  menu_name: main
+  weight: -8
+
+asset.owned:
+  title: 'Assets Owned'
+  route_name: asset_owned
+  parent: asset.home
+  menu_name: main
+  weight: -6
+
+asset.overview:
+  title: 'Asset Overview'
+  route_name: asset_overview
+  parent: asset.home
+  menu_name: main
+  weight: -4
+
+asset.expiry:
+  title: 'Asset Expiry List'
+  route_name: asset_expiry
+  parent: asset.home
+  menu_name: main
+  weight: 0
+

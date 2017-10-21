@@ -1,0 +1,26 @@
+asset_overview:
+  path: '/admin/structure/asset'
+  defaults:
+    _title: 'Asset Overview'
+  requirements:
+    _permission: 'administer asset entities'
+
+asset_expiry:
+  path: '/asset/expiry/list'
+  defaults:
+    _title: 'Asset Expiry List'
+  requirements:
+    _permission: 'administer asset entities'
+
+asset_viewlist:
+  path: '/asset/viewlist'
+  defaults:
+    _title: 'View Asset List'
+  requirements:
+    _permission: 'administer asset entities'
+
+asset_owned:
+  path: '/asset/own'
+  defaults:
+    _title: 'Assets Owned'
+
