@@ -24,3 +24,7 @@ asset_owned:
   defaults:
     _title: 'Assets Owned'
 
+home:
+  path: <front>
+  defaults:
+    _title: 'Home'

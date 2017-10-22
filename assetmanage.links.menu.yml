@@ -39,3 +39,11 @@ asset.expiry:
   route_name: asset.expiry
   parent: asset.home
   expended: TRUE
+
+home:
+  title: 'Home'
+  route_name: home
+  parent: main
+  menu_name: main
+  weight: -100
+  
