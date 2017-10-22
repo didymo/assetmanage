@@ -35,9 +35,7 @@ asset.owned:
   weight: -6
 
 asset.expiry:
-  title: 'Asset Expiry List'
-  route_name: asset_expiry
+  title: 'Expiry List'
+  route_name: asset.expiry
   parent: asset.home
-  menu_name: main
-  weight: 0
-
+  expended: TRUE

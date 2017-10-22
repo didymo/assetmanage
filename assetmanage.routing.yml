@@ -1,7 +1,14 @@
-asset_expiry:
+asset.expiry:
+  path: '/asset/expiry/list'
+  defaults:
+    _title: 'Expiry List'
+  requirements:
+    _permission: 'administer asset entities'
+
+asset.expiry3:
   path: '/asset/expiry/list/3'
   defaults:
-    _title: 'Asset Expiry List'
+    _title: '3 Months'
   requirements:
     _permission: 'administer asset entities'
 
