@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.asset.asset.field_associated_assets
     - field.field.asset.asset.field_associated_users
+    - field.field.asset.asset.field_desc
     - field.field.asset.asset.field_description
     - field.field.asset.asset.field_expiry
     - field.field.asset.asset.field_image
@@ -18,105 +19,97 @@ dependencies:
   module:
     - assetmanage
     - datetime
-    - link
+    - ds
+    - image
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_stacked_fluid
+      library: ds/ds_2col_stacked_fluid
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          header: div
+          left: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - field_image
+        - field_description
+      left:
+        - field_type
+        - field_value
+        - field_expiry
+      right:
+        - field_associated_users
+        - field_associated_assets
 _core:
-  default_config_hash: '-qFX1Zzn2KGITmEqoc2eIfMmY8kdOY_8KD_Npj9nulQ'
+  default_config_hash: Y30rBOoEF_j34Wg0mdH7uOjJ1Ebg7atd7jSPEDfHHXE
 id: asset.asset.default
 targetEntityType: asset
 bundle: asset
 mode: default
 content:
-  field_image:
-      weight: 22
-      label: above
-      settings:
-        image_style: ''
-        image_link: ''
-      third_party_settings: {  }
-      type: image
   field_associated_assets:
-    weight: 7
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
     type: entity_reference_label
-  field_associated_users:
     weight: 6
-    label: inline
+    region: right
+    label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+  field_associated_users:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: author
+    region: right
   field_description:
-    weight: 8
-    label: inline
+    weight: 1
+    label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: header
   field_expiry:
-    weight: 5
-    label: inline
+    weight: 4
+    label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: default_medium_date
     third_party_settings: {  }
     type: datetime_default
-  field_ownassociated:
-    weight: 13
-    label: above
+    region: left
+  field_image:
+    weight: 0
+    label: hidden
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
-    type: link
-  field_ownevents:
-    weight: 12
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-  field_ownusers:
-    weight: 14
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-  field_ownview:
-    weight: 11
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
+    type: image
+    region: header
   field_type:
     weight: 2
-    label: inline
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: left
   field_value:
-    weight: 4
-    label: inline
+    weight: 3
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -124,18 +117,13 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_decimal
-  name:
-    label: inline
-    type: string
-    weight: -4
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  user_id:
-    label: hidden
-    type: author
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
+    region: left
 hidden:
+  field_desc: true
   field_name: true
+  field_ownassociated: true
+  field_ownevents: true
+  field_ownusers: true
+  field_ownview: true
+  name: true
+  user_id: true

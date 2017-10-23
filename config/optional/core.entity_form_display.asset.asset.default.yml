@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.asset.asset.field_associated_assets
     - field.field.asset.asset.field_associated_users
+    - field.field.asset.asset.field_desc
     - field.field.asset.asset.field_description
     - field.field.asset.asset.field_expiry
     - field.field.asset.asset.field_image
@@ -15,11 +16,13 @@ dependencies:
     - field.field.asset.asset.field_ownview
     - field.field.asset.asset.field_type
     - field.field.asset.asset.field_value
+    - image.style.thumbnail
   module:
     - assetmanage
     - datetime
+    - image
 _core:
-  default_config_hash: InhxmHXF44dNfinv3X7Mw_MRSnPbyFCRRgFP-yT4TXg
+  default_config_hash: zv1fOzD6RWpgK7Wo5uTt6Vr_niZDXmV1BMrSNjeQhrc
 id: asset.asset.default
 targetEntityType: asset
 bundle: asset
@@ -33,6 +36,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_associated_users:
     weight: 5
     settings:
@@ -41,6 +45,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
   field_description:
     weight: 2
     settings:
@@ -48,18 +53,21 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
-  field_image:
-      weight: 1
-      settings:
-        progress_indicator: throbber
-        preview_image_style: thumbnail
-      third_party_settings: {  }
-      type: image_image
+    region: content
   field_expiry:
     weight: 4
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_type:
     weight: 1
     settings:
@@ -67,12 +75,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_value:
     weight: 3
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
   name:
     type: string_textfield
     weight: 0
@@ -80,7 +90,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden:
+  field_desc: true
   field_name: true
   field_ownassociated: true
   field_ownevents: true

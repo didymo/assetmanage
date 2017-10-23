@@ -1,0 +1,32 @@
+asset.expiry:
+  path: '/asset/expiry/list'
+  defaults:
+    _title: 'Expiry List'
+  requirements:
+    _permission: 'administer asset entities'
+
+asset.expiry3:
+  path: '/asset/expiry/list/3'
+  defaults:
+    _title: '3 Months'
+  requirements:
+    _permission: 'administer asset entities'
+
+asset_viewlist:
+  path: '/asset/viewlist'
+  defaults:
+    _title: 'View Asset List'
+  requirements:
+    _permission: 'administer asset entities'
+
+asset_owned:
+  path: '/asset/own'
+  defaults:
+    _title: 'Assets Owned'
+
+home:
+  path: <front>
+  defaults:
+    _title: 'Home'
+  requirements:
+    _permission: 'access content'

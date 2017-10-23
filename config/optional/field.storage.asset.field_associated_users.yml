@@ -6,7 +6,7 @@ dependencies:
     - assetmanage
     - user
 _core:
-  default_config_hash: zPnVK-TMFAC_Flqoz9fSg7Lp_8XiRWvHO_Q05b-2lJo
+  default_config_hash: SfPvvydB-85oVu-RNd9A--MztUeTviiIC72JaISeqfI
 id: asset.field_associated_users
 field_name: field_associated_users
 entity_type: asset

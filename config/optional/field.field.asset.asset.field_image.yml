@@ -5,10 +5,10 @@ dependencies:
   config:
     - field.storage.asset.field_image
   module:
-    - image
     - assetmanage
+    - image
 _core:
-  default_config_hash: dKcEWQUGLLN6mZmQXC60flzLPZRw4DdBrlUDdWdh1SM
+  default_config_hash: bn19OKVuAnsFFQA8ZQR78fJ81iFv0g1igKKmBYTLB3o
 id: asset.asset.field_image
 field_name: field_image
 entity_type: asset
@@ -30,11 +30,11 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: ''
+    uuid: 9719ddc5-e16f-4d07-864f-0ac4859d63c2
     alt: ''
     title: ''
-    width: null
-    height: null
+    width: 256
+    height: 256
   handler: 'default:file'
   handler_settings: {  }
 field_type: image
