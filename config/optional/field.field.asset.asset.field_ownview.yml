@@ -7,8 +7,6 @@ dependencies:
   module:
     - assetmanage
     - link
-_core:
-  default_config_hash: JZoVPNMLO9l9TH-dDrLGcab_bDqWsYUUF7Zor9MwEpQ
 id: asset.asset.field_ownview
 field_name: field_ownview
 entity_type: asset

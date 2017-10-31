@@ -1,15 +1,14 @@
-uuid: e96f64ae-b089-492a-977b-114b18e99950
+uuid: ae62d611-6707-4e5c-b7f9-cb73defa9029
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.field_publink
+    - field.storage.asset.field_ownview
   module:
     - assetmanage
     - link
-    - user
-id: associated_users
-label: 'Associated Users'
+id: associated_assets
+label: 'Associated Assets'
 module: views
 description: ''
 tag: ''
@@ -59,12 +58,12 @@ display:
       fields:
         name:
           id: name
-          table: users_field_data
+          table: asset
           field: name
-          relationship: field_associated_users
+          relationship: none
           group_type: group
           admin_label: ''
-          label: Name
+          label: 'Asset Name'
           exclude: false
           alter:
             alter_text: false
@@ -106,9 +105,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: user_name
+          type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -119,17 +118,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
+          entity_type: asset
           entity_field: name
           plugin_id: field
-        field_publink:
-          id: field_publink
-          table: user__field_publink
-          field: field_publink
-          relationship: field_associated_users
+        field_ownview:
+          id: field_ownview
+          table: asset__field_ownview
+          field: field_ownview
+          relationship: none
           group_type: group
           admin_label: ''
-          label: 'View Profile'
+          label: 'Asset View'
           exclude: false
           alter:
             alter_text: false
@@ -191,29 +190,30 @@ display:
           plugin_id: field
       filters: {  }
       sorts: {  }
-      title: 'Associated Users'
+      title: 'Associated Assets'
       header: {  }
       footer: {  }
       empty: {  }
       relationships:
-        field_associated_users:
-          id: field_associated_users
-          table: asset__field_associated_users
-          field: field_associated_users
+        reverse__asset__field_associated_assets:
+          id: reverse__asset__field_associated_assets
+          table: asset
+          field: reverse__asset__field_associated_assets
           relationship: none
           group_type: group
-          admin_label: 'field_associated_users: User'
+          admin_label: field_associated_assets
           required: false
-          plugin_id: standard
+          entity_type: asset
+          plugin_id: entity_reverse
       arguments:
         id:
           id: id
           table: asset
           field: id
-          relationship: none
+          relationship: reverse__asset__field_associated_assets
           group_type: group
           admin_label: ''
-          default_action: empty
+          default_action: ignore
           exception:
             value: all
             title_enable: false
@@ -251,7 +251,7 @@ display:
         - 'languages:language_interface'
         - url
       tags:
-        - 'config:field.storage.user.field_publink'
+        - 'config:field.storage.asset.field_ownview'
   page_1:
     display_plugin: page
     id: page_1
@@ -259,7 +259,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: asset/%/users
+      path: asset/%/associated
     cache_metadata:
       max-age: 0
       contexts:
@@ -267,4 +267,4 @@ display:
         - 'languages:language_interface'
         - url
       tags:
-        - 'config:field.storage.user.field_publink'
+        - 'config:field.storage.asset.field_ownview'

@@ -34,9 +34,9 @@ class AssetListBuilder extends EntityListBuilder {
     $row['name'] = $this->l(
       $entity->label(),
       new Url(
-        'entity.asset.edit_form', array(
+        'entity.asset.edit_form', [
           'asset' => $entity->id(),
-        )
+        ]
       )
     );
     return $row + parent::buildRow($entity);

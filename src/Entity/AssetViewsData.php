@@ -16,11 +16,11 @@ class AssetViewsData extends EntityViewsData implements EntityViewsDataInterface
   public function getViewsData() {
     $data = parent::getViewsData();
 
-    $data['asset']['table']['base'] = array(
+    $data['asset']['table']['base'] = [
       'field' => 'id',
       'title' => $this->t('Asset'),
       'help' => $this->t('The Asset ID.'),
-    );
+    ];
 
     return $data;
   }

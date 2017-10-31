@@ -1,48 +1,13 @@
 # Asset menu items definition
+entity.asset.collection:
+  title: 'Asset list'
+  route_name: entity.asset.collection
+  description: 'List Asset entities'
+  parent: system.admin_structure
+  weight: 100
+
 asset.admin.structure.settings:
   title: Asset settings
   description: 'Configure Asset entities'
   route_name: asset.settings
   parent: system.admin_structure
-
-asset.home:
-  title: 'Asset'
-  route_name: entity.asset.add_form
-  parent: main
-  menu_name: main
-  expanded: TRUE
-  weight: -5
-
-asset.add:
-  title: 'Add Asset'
-  route_name: entity.asset.add_form
-  parent: asset.home
-  menu_name: main
-  weight: -10
-
-asset.viewlist:
-  title: 'View Asset list'
-  route_name: asset_viewlist
-  parent: asset.home
-  menu_name: main
-  weight: -8
-
-asset.owned:
-  title: 'Assets Owned'
-  route_name: asset_owned
-  parent: asset.home
-  menu_name: main
-  weight: -6
-
-asset.expiry:
-  title: 'Expiry List'
-  route_name: asset.expiry
-  parent: asset.home
-  expended: TRUE
-
-home:
-  title: 'Home'
-  route_name: home
-  parent: main
-  menu_name: main
-  weight: -100

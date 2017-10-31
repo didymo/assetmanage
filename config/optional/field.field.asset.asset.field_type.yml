@@ -7,12 +7,12 @@ dependencies:
   module:
     - assetmanage
 _core:
-  default_config_hash: NFfcjj9erd0KT8j43TyYXLJC5gTQVg2mYCNnRofxK7w
+  default_config_hash: jAFKsAIleOuqhrozxp8asYwR57PNAL0ibWmPGNM2xeA
 id: asset.asset.field_type
 field_name: field_type
 entity_type: asset
 bundle: asset
-label: 'Type : '
+label: Type
 description: ''
 required: false
 translatable: false

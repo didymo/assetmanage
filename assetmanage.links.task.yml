@@ -3,7 +3,6 @@ asset.settings_tab:
   route_name: asset.settings
   title: 'Settings'
   base_route: asset.settings
-
 entity.asset.canonical:
   route_name: entity.asset.canonical
   base_route: entity.asset.canonical
@@ -19,14 +18,3 @@ entity.asset.delete_form:
   base_route:  entity.asset.canonical
   title: Delete
   weight: 10
-
-asset.expiry:
-  route_name: asset.expiry
-  title: 'Expiry List'
-  base_route: asset.expiry
-
-asset.expiry3:
-  route_name: asset.expiry3
-  title: '3 Months'
-  base_route: asset.expiry
-
