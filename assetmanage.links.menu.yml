@@ -1,4 +1,11 @@
 # Asset menu items definition
+entity.asset.collection:
+  title: 'Asset list'
+  route_name: entity.asset.collection
+  description: 'List Asset entities'
+  parent: system.admin_structure
+  weight: 100
+
 asset.admin.structure.settings:
   title: Asset settings
   description: 'Configure Asset entities'
@@ -8,10 +15,10 @@ asset.admin.structure.settings:
 asset.home:
   title: 'Asset'
   route_name: entity.asset.add_form
-  parent: main
-  menu_name: main
-  expanded: TRUE
-  weight: -5
+    parent: main
+    menu_name: main
+    expanded: TRUE
+    weight: -5
 
 asset.add:
   title: 'Add Asset'

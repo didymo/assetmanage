@@ -5,16 +5,8 @@ namespace Drupal\assetmanage\Form;
 use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 
-use Drupal\Core\Entity\EntityStorageInterface;
-use Drupal\Core\Field\BaseFieldDefinition;
-use Drupal\Core\Entity\ContentEntityBase;
-use Drupal\Core\Entity\EntityChangedTrait;
-use Drupal\Core\Entity\EntityTypeInterface;
-use Drupal\assetmanage\AssetInterface;
-use Drupal\user\UserInterface;
 use Drupal\user\Entity\User;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-
 
 /**
  * Form controller for Asset edit forms.
@@ -38,16 +30,15 @@ class AssetForm extends ContentEntityForm {
     $splitPath = explode('/', $currentPath);
 
     // \Drupal::logger('barp')->info($entity->isPublished());
-
-    if($currentUser->hasRole('administrator')) {
-      $form['separator1'] = array(
+    if ($currentUser->hasRole('administrator')) {
+      $form['separator1'] = [
         '#type' => 'html_tag',
         '#tag' => 'p',
         '#value' => $this->t('<br>'),
-        '#weight' => 98
-      );
+        '#weight' => 98,
+      ];
 
-      if(end($splitPath) != 'add') {
+      if (end($splitPath) != 'add') {
         $form['approved']['#default_value'] = $entity->isPublished();
       }
     }
@@ -70,7 +61,7 @@ class AssetForm extends ContentEntityForm {
           '%label' => $entity->label(),
         ]));
 
-        // Sets the own link field to a link to its view
+        // Sets the own link field to a link to its view.
         $entity->field_ownview = $base_url . "/asset/" . $entity->id() . "/view";
         $entity->field_ownview->title = "View Asset";
 
@@ -83,7 +74,7 @@ class AssetForm extends ContentEntityForm {
         $entity->field_ownusers = $base_url . "/asset/" . $entity->id() . "/users";
         $entity->field_ownusers->title = "View Associated Users";
 
-        $entity->setPublished(false);
+        $entity->setPublished(FALSE);
         \Drupal::logger('barp')->info($entity->isPublished());
         $entity->save();
         break;
@@ -94,14 +85,13 @@ class AssetForm extends ContentEntityForm {
         ]));
         $entity->setPublished($form_state->getValue('approved'));
         $entity->save();
-        
+
     }
 
     $url = $base_url . "/asset/" . $entity->id() . "/view/";
 
     $response = new RedirectResponse($url);
     $response->send();
-    // $form_state->setRedirect('entity.asset.canonical', ['asset' => $entity->id()]);
   }
 
 }

@@ -1,19 +1,19 @@
-uuid: e96f64ae-b089-492a-977b-114b18e99950
+uuid: 43c06800-8672-4711-aad9-c9048e8527b6
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.field_publink
+    - field.storage.asset.field_ownview
   module:
     - assetmanage
+    - eventcreator
     - link
-    - user
-id: associated_users
-label: 'Associated Users'
+id: event_asset_list
+label: 'Event Asset List'
 module: views
 description: ''
 tag: ''
-base_table: asset
+base_table: parent_event
 base_field: id
 core: 8.x
 display:
@@ -59,9 +59,9 @@ display:
       fields:
         name:
           id: name
-          table: users_field_data
+          table: asset
           field: name
-          relationship: field_associated_users
+          relationship: field_associated_assets
           group_type: group
           admin_label: ''
           label: Name
@@ -106,9 +106,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: user_name
+          type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -119,17 +119,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
+          entity_type: asset
           entity_field: name
           plugin_id: field
-        field_publink:
-          id: field_publink
-          table: user__field_publink
-          field: field_publink
-          relationship: field_associated_users
+        field_ownview:
+          id: field_ownview
+          table: asset__field_ownview
+          field: field_ownview
+          relationship: field_associated_assets
           group_type: group
           admin_label: ''
-          label: 'View Profile'
+          label: 'Asset Link'
           exclude: false
           alter:
             alter_text: false
@@ -191,24 +191,24 @@ display:
           plugin_id: field
       filters: {  }
       sorts: {  }
-      title: 'Associated Users'
+      title: 'Event Asset List'
       header: {  }
       footer: {  }
       empty: {  }
       relationships:
-        field_associated_users:
-          id: field_associated_users
-          table: asset__field_associated_users
-          field: field_associated_users
+        field_associated_assets:
+          id: field_associated_assets
+          table: parent_event__field_associated_assets
+          field: field_associated_assets
           relationship: none
           group_type: group
-          admin_label: 'field_associated_users: User'
+          admin_label: 'field_associated_assets: Asset'
           required: false
           plugin_id: standard
       arguments:
         id:
           id: id
-          table: asset
+          table: parent_event
           field: id
           relationship: none
           group_type: group
@@ -240,7 +240,7 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
-          entity_type: asset
+          entity_type: parent_event
           entity_field: id
           plugin_id: numeric
       display_extenders: {  }
@@ -251,7 +251,7 @@ display:
         - 'languages:language_interface'
         - url
       tags:
-        - 'config:field.storage.user.field_publink'
+        - 'config:field.storage.asset.field_ownview'
   page_1:
     display_plugin: page
     id: page_1
@@ -259,7 +259,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: asset/%/users
+      path: event/%/assetlist
     cache_metadata:
       max-age: 0
       contexts:
@@ -267,4 +267,4 @@ display:
         - 'languages:language_interface'
         - url
       tags:
-        - 'config:field.storage.user.field_publink'
+        - 'config:field.storage.asset.field_ownview'

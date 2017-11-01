@@ -8,12 +8,12 @@ dependencies:
     - assetmanage
     - datetime
 _core:
-  default_config_hash: HFpEyZkZ7MFGCfVFf0wODIdvkS1ADEuYcTmagmXM8O4
+  default_config_hash: pY6VAUdW4sMBT2GHa_-ss_4rUGDJ0HKeokBJgK9tlGQ
 id: asset.asset.field_expiry
 field_name: field_expiry
 entity_type: asset
 bundle: asset
-label: 'Expiry : '
+label: Expiry
 description: 'Optional. Not all assets have expiry dates.'
 required: false
 translatable: false
