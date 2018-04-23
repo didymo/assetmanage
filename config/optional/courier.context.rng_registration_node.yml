@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: rng_registration_node
-label: 'Event (Content): Registration'
-tokens:
-  - node
-  - registration
