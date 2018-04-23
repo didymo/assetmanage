@@ -5,6 +5,13 @@
  * Contains assetmanage.module..
  */
 
+/*
+ * Max
+ * It looks like the loop below based on an input from.
+ * RouteMatchInterface which is from the user that then determines.
+ * how to output and display to user.
+ */
+
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
