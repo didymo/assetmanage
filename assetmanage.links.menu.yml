@@ -1,3 +1,7 @@
+/*
+* As far as i can see the following below are either links
+* or the names of the buttons i press in the asset drop down in the menu
+*/
 # Asset menu items definition
 asset.admin.structure.settings:
   title: Asset settings

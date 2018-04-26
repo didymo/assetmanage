@@ -5,6 +5,12 @@
  * Contains assetmanage.module..
  */
 
+/*
+ * @todo It looks like the loop below is based on an input from the user. Find out what it does.
+ * RouteMatchInterface which is from the user that then determines.
+ * how to output and display to user.
+ */
+
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
